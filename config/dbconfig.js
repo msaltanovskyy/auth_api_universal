@@ -4,13 +4,11 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const pool = new Pool({
-    user: process.env.DB_USER,
-    password: process.env.DB_PASS,
+    user: process.env.DB_USER || 'postgres',
+    password: process.env.DB_PASS || '123456',
     host: process.env.DB_HOST || 'localhost',
-    port: process.env.DB_PORT|| 5432, // default Postgres port
+    port: process.env.DB_PORT|| 5432,
     database: process.env.DB_NAME
 });
 
-module.exports = {
-    query: (text, params) => pool.query(text, params)
-};
+module.exports = pool

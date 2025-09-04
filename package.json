@@ -13,7 +13,7 @@
   ],
   "author": "@msaltanovskyy",
   "license": "ISC",
-  "description": "Universal API for auditing NoSQL",
+  "description": "Universal API for auditing PostgreSQL",
   "dependencies": {
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
